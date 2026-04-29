@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health-Net — Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="logo" class="logo-sidebar">
+        <h2>Health-Net</h2>
+      </div>
+
+      <div class="user-card">
+        <img id="sidePhoto" src="assets/images/admin.png" alt="usuario" class="user-photo">
+        <div class="user-info">
+          <div id="sideName" class="user-name">Usuario</div>
+          <div id="sideRole" class="user-role">Rol</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button id="mDashboard" class="menu-btn">Inicio</button>
+        <button id="mResultados" class="menu-btn">Ver Resultados</button>
+        <button id="mNuevo" class="menu-btn">Subir Diagnóstico</button>
+        <button id="mTabla" class="menu-btn">Tabla General</button>
+        <button id="mHistorial" class="menu-btn">Historial Clínico</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="logoutBtn" class="btn danger">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+      <header class="topbar" style="background-image:url('assets/images/fondo_inicio.png'); background-size:cover;">
+        <div class="topbar-left">
+          <h3 id="welcomeTitle">Panel de Control</h3>
+          <p class="muted" id="welcomeSubtitle">Resumen de actividad clínica</p>
+        </div>
+        <div class="topbar-right" id="topbarStats"></div>
+      </header>
+
+      <section class="content container">
+        <div class="cards-grid">
+          <div class="card stat">
+            <div class="stat-title">Pacientes</div>
+            <div id="statPatients" class="stat-value">0</div>
+            <div class="stat-note">Registrados</div>
+          </div>
+
+          <div class="card stat">
+            <div class="stat-title">Diagnósticos IA</div>
+            <div id="statIA" class="stat-value">0</div>
+            <div class="stat-note">Generados</div>
+          </div>
+
+          <div class="card stat">
+            <div class="stat-title">Diagnósticos manuales</div>
+            <div id="statManual" class="stat-value">0</div>
+            <div class="stat-note">Hechos por doctores</div>
+          </div>
+
+          <div class="card stat">
+            <div class="stat-title">Precisión media</div>
+            <div id="statAcc" class="stat-value">0%</div>
+            <div class="stat-note">Confianza IA</div>
+          </div>
+        </div>
+
+        <div class="card mt-20">
+          <h4>Resultados recientes</h4>
+          <div id="recentList" class="recent-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

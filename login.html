@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health-Net — Iniciar sesión</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-login" style="background-image:url('assets/images/fondo_login.png')">
+  <div class="overlay"></div>
+
+  <main class="login-wrapper">
+    <div class="card login-card">
+      <img src="assets/images/logo.png" alt="logo" class="logo-login">
+      <h1>Health-Net</h1>
+      <p class="muted">Plataforma clínica — inicia sesión</p>
+
+      <form id="loginForm" class="form">
+        <input id="username" placeholder="Usuario" required>
+        <input id="password" type="password" placeholder="Contraseña" required>
+        <button class="btn primary" type="submit">Ingresar</button>
+      </form>
+
+      <p id="loginMessage" class="msg error"></p>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

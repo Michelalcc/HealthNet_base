@@ -1,0 +1,115 @@
+/* styles.css - Health-Net (tema profesional) */
+:root{
+  --primary: #0b63a5;
+  --accent: #0ea5ff;
+  --bg: #f5f9ff;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --danger: #e02424;
+  --success: #16a34a;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(11,97,165,0.08);
+  --font: "Poppins", sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--font);background:var(--bg);color:#111}
+a{color:inherit;text-decoration:none}
+
+/* login */
+.page-login{ background-position:center;background-size:cover; min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; }
+.overlay{ position:absolute; inset:0; background:rgba(4,28,48,0.28) }
+.login-wrapper{ position:relative; z-index:2; width:100%; max-width:420px; padding:24px; }
+.card.login-card{ background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:28px; text-align:center; }
+.logo-login{ width:84px;height:84px;border-radius:999px;object-fit:cover;margin-bottom:8px }
+.login-card h1{ margin:6px 0; color:var(--primary) }
+.muted{ color:var(--muted); margin:0 0 12px 0 }
+.form input{ width:100%; padding:10px; margin:8px 0; border-radius:10px; border:1px solid #e6f0ff }
+.btn{ padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:600 }
+.btn.primary{ background:var(--primary); color:#fff }
+.btn.success{ background:var(--success); color:#fff }
+.btn.neutral{ background:#9aa7b7; color:#fff }
+.btn.danger{ background:var(--danger); color:#fff }
+
+/* layout */
+.layout{ display:flex; min-height:100vh }
+.sidebar{ width:260px; background:linear-gradient(180deg,#ffffff,#f8fbff); padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column }
+.logo-sidebar{ width:54px;height:54px;border-radius:10px;object-fit:cover }
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand h2{ margin:0; color:var(--primary) }
+.user-card{ display:flex; align-items:center; gap:12px; margin:18px 0 }
+.user-photo{ width:64px;height:64px;border-radius:999px;object-fit:cover; border:3px solid rgba(11,99,165,0.08) }
+.user-name{ font-weight:700 }
+.user-role{ color:var(--muted); font-size:13px }
+.menu{ display:flex; flex-direction:column; gap:8px; margin-top:6px }
+.menu-btn{ background:transparent; border:0; text-align:left; padding:10px; border-radius:8px; cursor:pointer; font-weight:600 }
+.menu-btn:hover{ background:#eef7ff }
+.sidebar-footer{ margin-top:auto }
+
+/* main */
+.main{ flex:1; display:flex; flex-direction:column; min-height:100vh }
+.topbar{ padding:18px 24px; border-bottom:1px solid #eef7ff; background:linear-gradient(90deg, #ffffff, #f8fbff); display:flex; align-items:center; gap:16px }
+.topbar-left{ display:flex; flex-direction:column }
+.topbar-right{ margin-left:auto }
+.content{ padding:24px }
+.container{ max-width:1100px; margin:0 auto }
+
+/* cards */
+.card{ background:var(--card); border-radius:12px; padding:18px; box-shadow:var(--shadow) }
+.cards-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:14px }
+.stat{ text-align:left }
+.stat-title{ color:var(--muted); font-size:13px }
+.stat-value{ font-size:26px; color:var(--primary); margin-top:6px }
+.stat-note{ color:var(--muted); font-size:13px }
+
+/* recent list */
+.recent-list{ display:flex; flex-direction:column; gap:8px; margin-top:8px }
+.recent-item{ display:flex; justify-content:space-between; align-items:center; padding:10px; border-radius:8px; background:#fbfdff; border:1px solid #eef8ff }
+
+/* nuevo diagnóstico layout */
+.two-col{ display:flex; gap:18px; align-items:flex-start }
+.left-col{ flex:1 }
+.right-col{ width:420px }
+.preview-large{ width:100%; max-height:360px; object-fit:contain; border-radius:12px; border:1px solid #e6f6ff; margin-top:8px }
+.actions{ margin-top:12px; display:flex; gap:8px; align-items:center }
+.table.small{ width:100%; border-collapse:collapse }
+.table.small td{ padding:6px; border-bottom:1px solid #f1f8ff }
+
+/* IA box */
+.ia-box{ background:#eef9ff; border:1px solid #dff0ff; padding:10px; border-radius:8px; margin-top:8px }
+.conf-row{ display:flex; gap:8px; align-items:center }
+.bar-outer{ flex:1; background:#eaf6ff; height:12px; border-radius:8px; overflow:hidden }
+.bar-inner{ width:0%; height:100%; background:var(--primary); transition:width .6s ease }
+
+/* tables */
+.table{ width:100%; border-collapse:collapse; margin:0; }
+.table thead th{ background:linear-gradient(90deg,var(--primary),var(--accent)); color:#fff; padding:10px; text-align:left }
+.table tbody td{ padding:10px; border:1px solid #eef8ff; vertical-align:middle }
+
+/* historial grid */
+.grid-list{ display:grid; gap:10px }
+.patient-card{ display:flex; gap:14px; align-items:flex-start; padding:12px; border-radius:10px; background:var(--card); box-shadow:var(--shadow) }
+.patient-card img{ width:120px;height:120px;border-radius:12px;object-fit:cover }
+
+/* export button */
+.btn.export-csv{ display:inline-flex; align-items:center; gap:10px; background: linear-gradient(90deg,#06b6d4,#10b981); color:#fff; border:0; padding:10px 14px; border-radius:10px; font-weight:700; box-shadow: 0 8px 20px rgba(16,185,129,0.12); cursor:pointer }
+.btn.export-csv:hover{ transform: translateY(-2px) }
+
+/* utilities */
+.table.small td:first-child{ font-weight:700; color:var(--primary) }
+.msg{ margin-top:8px }
+.msg.error{ color:var(--danger) }
+.msg.info{ color:var(--primary) }
+.mt-20{ margin-top:20px }
+.mt-16{ margin-top:16px }
+
+/* responsive */
+@media (max-width: 1000px){
+  .cards-grid{ grid-template-columns: repeat(2, 1fr) }
+  .sidebar{ display:none }
+  .two-col{ flex-direction:column }
+  .right-col{ width:auto }
+  .grid-list{ grid-template-columns: 1fr }
+}
+@media (min-width: 1001px){
+  .grid-list{ grid-template-columns: repeat(2, 1fr) }
+}

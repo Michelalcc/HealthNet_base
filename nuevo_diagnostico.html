@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health-Net — Nuevo Diagnóstico</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/images/logo.png" class="logo-sidebar" alt="logo">
+        <h2>Health-Net</h2>
+      </div>
+
+      
+
+      <div class="user-card">
+        <img id="sidePhoto_new" src="assets/images/admin.png" class="user-photo" alt="usuario">
+        <div class="user-info">
+          <div id="sideName_new" class="user-name">Usuario</div>
+          <div id="sideRole_new" class="user-role">Rol</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button onclick="location.href='inicio.html'" class="menu-btn">Inicio</button>
+        <button onclick="location.href='resultado.html'" class="menu-btn">Ver Resultados</button>
+        <button onclick="location.href='historial.html'" class="menu-btn">Historial Clínico</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="logoutBtn_new" class="btn danger">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h3>Nuevo Diagnóstico</h3>
+      </header>
+
+      <section class="content container">
+        <div class="card two-col">
+          <!-- Left -->
+          <div class="left-col">
+            <label class="form-label">Subir imagen RMC (nombre_apellido.jpg)</label>
+            <input id="imageInput" type="file" accept="image/*">
+            <img id="preview" class="preview-large" src="" alt="Vista previa" style="display:none;">
+            <div class="actions">
+              <button id="analyzeBtn" class="btn primary">Analizar con IA</button>
+              <button id="saveBtn" class="btn success">Guardar diagnóstico</button>
+              <button class="btn neutral" onclick="location.href='inicio.html'">Volver</button>
+            </div>
+            <p id="diagMsg" class="msg"></p>
+          </div>
+
+          <!-- Right -->
+          <div class="right-col">
+            <h4>Ficha clínica</h4>
+            <table class="table small">
+              <tbody>
+                <tr><td>Paciente</td><td id="p_name">—</td></tr>
+                <tr><td>Edad</td><td id="p_age">—</td></tr>
+                <tr><td>Sexo</td><td id="p_sex">—</td></tr>
+                <tr><td>DNI</td><td id="p_dni">—</td></tr>
+                <tr><td>Antecedentes</td><td id="p_history">—</td></tr>
+                <tr><td>Alergias</td><td id="p_allergies">—</td></tr>
+                <tr><td>Medicación</td><td id="p_meds">—</td></tr>
+              </tbody>
+            </table>
+
+            <hr>
+
+            <div id="iaBox" class="ia-box" style="display:none;">
+              <p><strong>Diagnóstico IA:</strong> <span id="ia_text">—</span></p>
+              <p><strong>Confianza:</strong> <span id="ia_conf">—</span>%</p>
+              <div class="conf-row">
+                <div class="label">Gravedad</div>
+                <div class="bar-outer"><div id="ia_bar" class="bar-inner"></div></div>
+                <div id="ia_level" class="label small">—</div>
+              </div>
+              <p><strong>Recomendación:</strong> <span id="ia_reco">—</span></p>
+              <p><strong>Tratamientos:</strong></p>
+              <ul id="ia_treats"></ul>
+            </div>
+
+            <hr>
+
+            <div>
+              <label>¿Tiene fibromas?</label>
+              <select id="doctorFib" class="input" disabled>
+                <option value="">--</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+              </select>
+
+              <label class="mt-8">Tipo de fibrosis</label>
+              <select id="doctorTipo" class="input" disabled>
+                <option value="">--</option>
+                <option value="Ninguno">Ninguno</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderado">Moderado</option>
+                <option value="Grave">Grave</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

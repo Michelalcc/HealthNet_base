@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health-Net — Resultados</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><img src="assets/images/logo.png" class="logo-sidebar"><h2>Health-Net</h2></div>
+      <div class="user-card">
+        <img id="sidePhoto_res" src="assets/images/admin.png" class="user-photo">
+        <div class="user-info"><div id="sideName_res">Usuario</div><div id="sideRole_res">Rol</div></div>
+      </div>
+      <nav class="menu">
+        <button onclick="location.href='inicio.html'" class="menu-btn">Inicio</button>
+        <button onclick="location.href='nuevo_diagnostico.html'" class="menu-btn">Subir Diagnóstico</button>
+        <button onclick="location.href='historial.html'" class="menu-btn">Historial Clínico</button>
+      </nav>
+      <div class="sidebar-footer"><button id="logoutBtn_res" class="btn danger">Cerrar sesión</button></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar"><h3>Resultados</h3><p class="muted"></p></header>
+
+      <section class="content container">
+        <div class="card">
+          <table id="tblResults" class="table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Paciente</th>
+                <th>Doctor</th>
+                <th>Diagnóstico</th>
+                <th>Confianza</th>
+                <th>Recomendación</th>
+                <th>Tratamiento</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 text-center">
+          <button class="btn neutral" onclick="location.href='inicio.html'">Volver</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
